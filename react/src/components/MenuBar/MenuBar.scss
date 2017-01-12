@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+.menu-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+
+  height: 48px;
+
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+a.menu-bar__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+
+  text-align: center;
+  color: #aaa;
+  text-decoration: none;
+
+  &--active {
+    color: $brand-primary;
+  }
+
+  &--inverse {
+    background: $brand-primary;
+    color: white;
+    border-radius: 50%;
+    transform: scale(1.4);
+    box-shadow: 1px -1px 3px #999;
+  }
+}
